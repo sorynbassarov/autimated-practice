@@ -1,0 +1,9 @@
+  
+{
+    "include":[
+        "**/*.js",
+        "**/*.json",
+        "webdriver/node_modules/@wdio/sync",
+        "webdriver/node_modules/@wdio/mocha-framework"
+    ]
+}

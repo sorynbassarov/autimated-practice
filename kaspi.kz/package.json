@@ -1,0 +1,29 @@
+{
+  "name": "kaspi.kz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio",
+    "report": "allure generate allure-results -o allure-report -c && allure open allure-report",
+    "clean": "rimraf allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.6.1",
+    "@wdio/cli": "^7.6.1",
+    "@wdio/local-runner": "^7.6.1",
+    "@wdio/mocha-framework": "^7.6.0",  
+
+    "@wdio/spec-reporter": "^7.6.1",
+    "allure-commandline": "^2.13.8",
+    "chromedriver": "^90.0.1",
+    "wdio-chromedriver-service": "^7.1.0"
+  },
+  "dependencies": {
+    "@wdio/sync": "^7.6.1",
+    "rimraf": "^3.0.2"
+  }
+}
