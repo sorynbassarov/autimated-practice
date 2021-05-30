@@ -6,9 +6,7 @@ exports.config = {
     //
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
-    hostname: 'localhost',
-    port: 4444,
-    path:   'wd/hub',
+    runner: 'local',
     //
     // ==================
     // Specify Test Files
@@ -61,6 +59,8 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
+        maxInstances: 5,
+        //
         browserName: 'chrome',
         acceptInsecureCerts: true,
         "goog:chromeOptions": {
@@ -75,7 +75,6 @@ exports.config = {
             },
            
         }
-
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -155,6 +154,7 @@ exports.config = {
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
     }]],
+
 
     
     //
@@ -244,7 +244,7 @@ exports.config = {
     afterTest: function(test, context, { error, result, duration, passed, retries }) {
         //if (!passed) {
             browser.takeScreenshot();
-//}
+        
     },
 
 
